@@ -1,0 +1,29 @@
+<nav *ngIf="isAuthorized" class="navbar navbar-expand-lg border-bottom py-2 nav-bar">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <form class="col-md-8">
+                <div class="position-relative">
+                    <input type="search" [(ngModel)]="searchName" [ngModelOptions]="{standalone: true}" (input)="onInputChange()" class="form-control" placeholder="{{'HEADER.SEARCH' | translate}}"
+                        aria-label="Search">
+                    <div class="suffix-icon">
+                        <i class="bi bi-search"></i>
+                    </div>
+                </div>
+            </form>
+            <div class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <div class="d-flex align-items-center">
+                    <button type="button" class="btn position-relative noti-icon">
+                        <i class="bi bi-bell fs-4 me-2"></i>
+                        <span class="badge bg-danger rounded-pill">3</span>
+                    </button>
+                    <img src="assets/images/user.png" alt="mdo" width="44px" height="44px" class="rounded-circle">
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- <app-tasks-list [searchName]="searchName"></app-tasks-list> -->

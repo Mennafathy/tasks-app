@@ -1,0 +1,78 @@
+<section class="container">
+    <div class="card p-3 w-75 mx-auto my-2 shadow shadow-lg">
+        <div class="card-body">
+            <h4 class="card-title mb-4">{{"REGISTER.SIGNUP" | translate}}</h4>
+            <hr>
+            <div class="row">
+                <div class="col-xl-6 col-md-12">
+                    <form [formGroup]="registerForm" (ngSubmit)="handleRegister(registerForm)">
+                        <div class="form-group my-2 my-2">
+                            <label class="label-control mb-2" for="name">{{"REGISTER.USERNAME" | translate}}</label>
+                            <input class="form-control" formControlName="name" type="text" name="name" id="name"
+                                placeholder="{{'REGISTER.USERNAME' | translate}}" />
+                        </div>
+                        <div *ngIf="registerForm.get('name')?.errors&&registerForm.get('name')?.touched" class="alert alert-danger">
+                            <p  *ngIf="registerForm.get('name')?.getError('required')|json" class="m-0">{{"REGISTER.NAMEREQUIRED" | translate}}</p>
+                        </div>
+                       
+                        
+                        <div class="form-group my-2">
+                            <label class="label-control mb-2" for="email">{{"REGISTER.EMAIL" | translate}}</label>
+                            <input class="form-control" formControlName="email" type="email" name="email" id="email"
+                                placeholder="Your Email" />
+                        </div>
+                        <div *ngIf="registerForm.get('email')?.errors&&registerForm.get('email')?.touched" class="alert alert-danger">
+                            <p *ngIf="registerForm.get('email')?.getError('email')|json" class="m-0">{{"REGISTER.EMAILINVALID" | translate}}</p>
+                            <p  *ngIf="registerForm.get('email')?.getError('required')|json" class="m-0">{{"REGISTER.EMAILREQUIRED" | translate}}</p>
+                        </div>
+
+                        <div class="form-group my-2">
+                            <label class="label-control mb-2" for="phone">{{"REGISTER.PHONE" | translate}}</label>
+                            <input class="form-control" type="tel" formControlName="phone" name="phone"
+                                id="phone" placeholder="Enter Your Phone Number" />
+                        </div>
+                        <div *ngIf="registerForm.get('phone')?.errors&&registerForm.get('phone')?.touched" class="alert alert-danger">
+                            <p *ngIf="registerForm.get('phone')?.getError('pattern')|json" class="m-0">{{"REGISTER.PHONEINAVLID" | translate}}</p>
+                            <p  *ngIf="registerForm.get('phone')?.getError('required')|json" class="m-0">{{"REGISTER.PHONEREQUIRED" | translate}}</p>
+                        </div>
+
+                        <div class="form-group my-2">
+                            <label class="label-control mb-2" for="pass">{{"REGISTER.PASSWORD" | translate}}</label>
+                            <input class="form-control" formControlName="password" type="password" autocomplete="on"
+                                name="pass" id="pass" placeholder="Password" />
+                        </div>
+                        <div *ngIf="registerForm.get('password')?.errors&&registerForm.get('password')?.touched" class="alert alert-danger">
+                            <p *ngIf="registerForm.get('password')?.getError('pattern')|json" class="m-0">{{"REGISTER.PASSWORDVALIDATION" | translate}}</p>
+                            <p  *ngIf="registerForm.get('password')?.getError('required')|json" class="m-0">{{"REGISTER.PASSWORDREQUIRED" | translate}}</p>
+                        </div>
+
+                        <div class="form-group my-2">
+                            <label class="label-control mb-2" for="newpass">{{"REGISTER.REPASSWORD" | translate}}</label>
+                            <input class="form-control" type="password" formControlName="repassword" autocomplete="on"
+                                name="newpass" id="newpass" placeholder="Repeat your password" />
+                        </div>
+                        <div *ngIf="registerForm.get('repassword')?.errors&&registerForm.get('repassword')?.touched" class="alert alert-danger">
+                            <p *ngIf="registerForm.get('repassword')?.getError('pattern')|json" class="m-0">{{"REGISTER.REPASSWORDVALIDATION" | translate}}</p>
+                            <p  *ngIf="registerForm.get('repassword')?.getError('required')|json" class="m-0">{{"REGISTER.REPASSWORDREQUIRED" | translate}}</p>
+                        </div>
+
+                        <div class="form-check my-2 mt-3 d-flex">
+                            <input class="label-control" class="form-check" type="checkbox"
+                                name="agree-term" id="agree-term" />
+                            <label class="form-check-label" for="agree-term">I
+                                agree all
+                                statements in <a href="#">Terms of service</a></label>
+                        </div>
+                        <button [disabled]="registerForm.invalid" class="btn btn-primary"
+                            type="submit">{{"REGISTER.REGISTERBTN" | translate}}</button>
+                    </form>
+                </div>
+                <div class="col-xl-6 col-md-12">
+                    <img class="w-100 h-100" src="assets/images/signup-image.jpg" alt="sign up image">
+                    <a href="#" routerLink="/Login" class="text-decoration-none text-dark">I am already member</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

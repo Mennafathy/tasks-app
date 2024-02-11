@@ -1,0 +1,47 @@
+{
+  "HEADER": {
+    "SEARCH": "Search..."
+  },
+  "SIDEBAR": {
+    "DASHBOARD": "Dashboard",
+    "PROJECTS":"Projects",
+    "TASKS":"Tasks",
+    "CALENDAR":"Calendar"
+
+  },
+  "TASKS":{
+    "HEADER":"Tasks",
+    "NEWTASK":"New Task",
+    "TODOHEADER":"To do",
+    "PROGRESSHEADER":"Progress",
+    "DONEHEADER":"Done"
+  },
+  "LOGIN":{
+    "SIGNIN":"Sign In",
+    "EMAIL":"Email",
+    "EMAILREQUIRED":"Email is Required",
+    "PASSWORD":"Password",
+    "PASSWORDREQUIRED":"Password is Required",
+    "REMEMBERME":"Remember me",
+    "LOGINBTN":"Login",
+    "CREATEACC":"Create an account"
+  },
+  "REGISTER":{
+    "SIGNUP":"Sign up",
+    "USERNAME":"User Name",
+    "NAMEREQUIRED":"Name is required",
+    "EMAIL":"Email",
+    "EMAILREQUIRED":"Email is Required",
+    "EMAILINVALID":"Email is Invalid",
+    "PHONE":"Phone",
+    "PHONEINAVLID":"Enter Valid phone Number",
+    "PHONEREQUIRED":"Phone is Required",
+    "PASSWORD":"Password",
+    "PASSWORDREQUIRED":"Password is Required",
+    "PASSWORDVALIDATION":"Password must start with upperCase then from 3 to 10",
+    "REPASSWORD":"RePassword",
+    "REPASSWORDREQUIRED":"RePassword is Required",
+    "REPASSWORDVALIDATION":"RePassword must start with upperCase then from 3 to 10",
+    "REGISTERBTN":"Register"
+  }
+}

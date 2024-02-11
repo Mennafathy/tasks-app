@@ -1,0 +1,48 @@
+{
+    "HEADER": {
+      "SEARCH": "بحث"
+    },
+    "SIDEBAR": {
+      "DASHBOARD": "لوحة القيادة",
+      "PROJECTS":"المشاريع",
+      "TASKS":"مهام",
+      "CALENDAR":"تقويم"
+  
+    },
+    "TASKS": {
+      "HEADER": "المهام",
+      "NEWTASK": "مهمة جديدة",
+      "TODOHEADER": "قيد التنفيذ",
+      "PROGRESSHEADER": "قيد التقدم",
+      "DONEHEADER": "تم الانتهاء"
+    },
+    "LOGIN": {
+      "SIGNIN": "تسجيل الدخول",
+      "EMAIL": "البريد الإلكتروني",
+      "EMAILREQUIRED": "البريد الإلكتروني مطلوب",
+      "PASSWORD": "كلمة المرور",
+      "PASSWORDREQUIRED": "كلمة المرور مطلوبة",
+      "REMEMBERME": "تذكرني",
+      "LOGINBTN": "تسجيل الدخول",
+      "CREATEACC": "إنشاء حساب"
+    },
+    "REGISTER": {
+      "SIGNUP": "التسجيل",
+      "USERNAME": "اسم المستخدم",
+      "NAMEREQUIRED": "الاسم مطلوب",
+      "EMAIL": "البريد الإلكتروني",
+      "EMAILREQUIRED": "البريد الإلكتروني مطلوب",
+      "EMAILINVALID": "البريد الإلكتروني غير صالح",
+      "PHONE": "رقم الهاتف",
+      "PHONEINAVLID": "أدخل رقم هاتف صالح",
+      "PHONEREQUIRED": "رقم الهاتف مطلوب",
+      "PASSWORD": "كلمة المرور",
+      "PASSWORDREQUIRED": "كلمة المرور مطلوبة",
+      "PASSWORDVALIDATION": "يجب أن تبدأ كلمة المرور بحرف كبير ثم من 3 إلى 10 أحرف",
+      "REPASSWORD": "إعادة كلمة المرور",
+      "REPASSWORDREQUIRED": "إعادة كلمة المرور مطلوبة",
+      "REPASSWORDVALIDATION": "يجب أن تبدأ إعادة كلمة المرور بحرف كبير ثم من 3 إلى 10 أحرف",
+      "REGISTERBTN": "التسجيل"
+    }
+  }
+  

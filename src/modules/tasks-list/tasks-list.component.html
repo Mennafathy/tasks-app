@@ -1,0 +1,104 @@
+<section class="container mt-3">
+    <div class="row align-items-center justify-content-between">
+        <div class="col-md-3">
+            <h2>{{"TASKS.HEADER" | translate}}</h2>
+        </div>
+        <div class="col-auto d-flex flex-wrap align-items-center">
+            <div class="col-md-6 col-sm-6">
+                <div class="fs-4 d-flex align-items-center">
+                    <i class="fa-solid me-3 fa-arrow-rotate-left"></i>
+                    <i class="fa-solid me-3 fa-rotate-right"></i>
+                    <i class="fa-regular me-3 fa-user"></i>
+                    <i class="fa-solid me-3 fa-sliders"></i>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <button type="button" (click)="openModal()" s class="btn btn-primary btn-lg w-100">{{"TASKS.NEWTASK" |
+                    translate}}<i class="fa-solid ms-2 fa-plus text-white"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+<ng-template #addModal let-modal>
+    <div class="modal-header">
+        <h5 class="modal-title" id="modal-title">Add new Task</h5>
+        <button type="button" class="btn-close" (click)="closeModal()"></button>
+    </div>
+    <form [formGroup]="addTaskForm" (ngSubmit)="onAddFormSubmit()">
+        <div class="modal-body p-4">
+            <div class="row my-2">
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label class="label-control mb-2" for="taskTitle">Task Name</label>
+                        <input type="text" class="form-control" id="taskTitle" formControlName="todo">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label class="form-check-label mb-2 me-2" for="completed">Completed</label>
+                        <input type="checkbox" class="form-check-input" id="completed" formControlName="completed">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-light me-1" (click)="closeModal()">
+                Close
+            </button>
+            <button type="submit" class="btn btn-success" id="btn-save-event">
+                Save
+            </button>
+        </div>
+    </form>
+    <!-- end modal dialog-->
+</ng-template>
+<ng-template #editModal let-modal>
+    <div class="modal-header">
+        <h5 class="modal-title" id="modal-title">Update Task</h5>
+        <button type="button" class="btn-close" (click)="closeModal()"></button>
+    </div>
+    <form [formGroup]="editTaskForm" (ngSubmit)="onEditFormSubmit()">
+        <div class="modal-body p-4">
+            <div class="row my-2">
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label class="label-control mb-2" for="taskTitle">Task Name</label>
+                        <input type="text" class="form-control" id="taskTitle" formControlName="todo">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label class="form-check-label mb-2 me-2" for="completed">Completed</label>
+                        <input type="checkbox" class="form-check-input" id="completed" formControlName="completed">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-light me-1" (click)="closeModal()">
+                Close
+            </button>
+            <button type="submit" class="btn btn-success" id="btn-save-event">
+                update
+            </button>
+        </div>
+    </form>
+    <!-- end modal dialog-->
+</ng-template>
+
+<section>
+    <div class="container my-5">
+        <div class="row py-5 g-3">
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <app-todo (editTaskEvent)="editTask($event)" (deleteTaskEvent)="deleteTodoTask($event)"
+                    [searchName]="searchName" [tasksList]="tasksList"></app-todo>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <app-progress [inprogressList]="inprogressList"></app-progress>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <app-done [doneList]=" doneList"></app-done>
+            </div>
+        </div>
+    </div>
+</section>

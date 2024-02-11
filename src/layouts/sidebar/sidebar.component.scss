@@ -1,0 +1,33 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    transition: all 0.5s ease;
+    z-index: 222;
+}
+
+.rectangle-icon {
+    border: 1px solid #2563DC;
+    width: 20px;
+    height: 20px;
+    transform: rotate(-45deg);
+}
+
+.list-item {
+    background-color: #EEF2FC;
+    color: #14367B;
+    margin: 12px 0px 12px 0px;
+}
+
+.nav-link.active {
+    background-color: #0d6efd;
+    color: #fff;
+}
+.logout-btn{
+    color: #81290E !important;
+}
+.logout-btn:hover {
+    color: #fff !important;
+}

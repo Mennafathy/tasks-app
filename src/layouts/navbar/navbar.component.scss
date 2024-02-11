@@ -1,0 +1,22 @@
+.suffix-icon {
+    position: absolute;
+    right: 14px;
+    top: 20%;
+    transform: translateX(-50%);
+    z-index: 88888888;
+}
+
+.noti-icon {
+    .badge {
+        position: absolute;
+        right: 9px;
+        top: 4px;
+    }
+}
+.nav-bar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 280px;
+    z-index: 999;
+}
